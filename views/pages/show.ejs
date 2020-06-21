@@ -1,0 +1,20 @@
+<%- include('../layout/head.ejs') %>
+
+
+  <main>
+    <a href="/favorites">My Favorites</a>
+      <ul>
+        <% pokemonToShow.forEach(pokemon => { %>
+          <li id="poke-card">
+            <form action="/add" method="post">
+              <h2><%= pokemon.name %></h3>
+              <input type=hidden name="name" value="<%= pokemon.name %>"></input>
+              <button>Add To Favorites</button>
+              </form>
+            </li>
+            <% }) %>
+          </ul>
+        </main>
+
+        
+        <%- include('../layout/footer.ejs') %>

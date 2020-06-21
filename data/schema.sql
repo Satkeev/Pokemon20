@@ -1,0 +1,5 @@
+DROP TABLE IF EXISTS poke2_table;
+CREATE TABLE poke2_table(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255)
+);

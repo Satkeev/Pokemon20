@@ -1,0 +1,19 @@
+
+/* //base styles */
+* {
+    
+    font-family: 'Arial, Helvetica, sans-serif', cursive;
+    border-style: border-box;
+  }
+  
+  body {
+    background-color: #968e8e;
+  }
+  
+  main {
+    margin: 0 auto;
+  }
+  
+  img {
+    max-height: 90px;
+  }
