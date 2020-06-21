@@ -1,7 +1,7 @@
 {
   "name": "poke20",
   "version": "1.0.0",
-  "description": "pokecollector",
+  "description": "mypokemons",
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha _tests/nightmare.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.2.0",
