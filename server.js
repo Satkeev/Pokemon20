@@ -27,7 +27,7 @@ function addPokeFavorites(request, response) {
   client.query(sql, safeValues)
     .then(sqlResults => {
       response.status(200).redirect('/');
-    }).catch();
+    }).catch(error => console.error(error));
 }
 
 function getMyPoke(request, response) {
@@ -41,7 +41,7 @@ function getMyPoke(request, response) {
       sortPokemon(finalPokeArray);
       response.status(200).render('pages/show.ejs', {
         pokemonToShow: finalPokeArray});
-    }).catch();
+    }).catch(error => console.error(error));
 }
 
 function showFavoritePoke(request, response) {
@@ -51,7 +51,7 @@ function showFavoritePoke(request, response) {
       let poke = sqlResults.rows;
       response.status(200).render('pages/favorites.ejs',
       {favoritePokemon: poke});
-    }).catch();
+    }).catch(error => console.error(error));
 }
 
 
@@ -82,4 +82,4 @@ client.connect()
     app.listen(PORT, () => {
       console.log(`Listening on ${PORT}`);
     })
-  }).catch();
+  }).catch(error => console.error(error));
