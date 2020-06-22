@@ -39,7 +39,7 @@ function getMyPoke(request, response) {
         return new Pokemon(poke);
       });
       sortPokemon(finalPokeArray);
-      response.status(200).render('pages/show.ejs', {
+      response.status(200).render('page/show.ejs', {
         pokemonToShow: finalPokeArray});
     }).catch(error => console.error(error));
 }
@@ -49,14 +49,14 @@ function showFavoritePoke(request, response) {
   client.query(sql)
     .then(sqlResults => {
       let poke = sqlResults.rows;
-      response.status(200).render('pages/favorites.ejs',
+      response.status(200).render('page/favorites.ejs',
       {favoritePokemon: poke});
     }).catch(error => console.error(error));
 }
 
 
 function notFound(request, response){
-  response.status(404).render('pages/error.ejs');
+  response.status(404).render('page/error.ejs');
 };
 
 
@@ -84,4 +84,4 @@ client.connect()
     })
   }).catch(error => console.error(error));
 
-  // ghhhh
+  
