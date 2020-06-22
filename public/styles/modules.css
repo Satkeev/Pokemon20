@@ -1,7 +1,7 @@
 
 /* //modules styles */
 
-@media only screen and (min-width: 860px) { 
+@media only screen and (min-width: 880px) { 
 
     * {
       flex-shrink: 1;
@@ -51,7 +51,7 @@
       background-color: #F8F8F8;
       border-radius: 50%;
       border: solid #485150 3px;
-      margin-left: 37%;
+      margin-left: 38%;
       position: absolute;
       text-align: center;
       z-index: 10;
